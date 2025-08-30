@@ -12,13 +12,13 @@ class HelloFFI {
 
   HelloFFI() {
     if (Platform.isAndroid) {
-      _lib = ffi.DynamicLibrary.open('libhello.so');
+      _lib = ffi.DynamicLibrary.open('libhello.so'); // lib + name + .so
     } else if (Platform.isIOS || Platform.isMacOS) {
       _lib = ffi.DynamicLibrary.process();
     }
 
     _hello = _lib
-        .lookup<ffi.NativeFunction<_hello_native_t>>('hello')
+        .lookup<ffi.NativeFunction<_hello_native_t>>('hello') // function name
         .asFunction<_hello_dart_t>();
   }
 
@@ -27,3 +27,4 @@ class HelloFFI {
     return ptrFunc.toDartString();
   }
 }
+
