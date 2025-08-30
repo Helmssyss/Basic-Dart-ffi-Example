@@ -8,7 +8,7 @@ FFI_EXPORT const char *hello(){
     return "Hello World From Cpp";
 }
 
-int* testFunc(){
+/*int* testFunc(){
     int* a = new int[5];
     return a;
 }
@@ -18,3 +18,4 @@ int main(int argc, char const *argv[]){
     delete[] abc;
     return 0;
 }
+*/ // insignificant
