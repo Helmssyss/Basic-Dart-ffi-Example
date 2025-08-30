@@ -24,7 +24,7 @@ android{
 }
 ```
 
-3 - If you are writing in C++, you must wrap your functions with `extern "C"` and then add the `__attribute__((visibility(“default”))) __attribute__((used))` flag. We must add these so that they can be used when compiled as a dynamic shared file (.so) for Android on the Dart FFI side. If you are writing in C, you only need to add the `__attribute__((visibility(“default”))) __attribute__((used))` flag. You can then run the project from main.dart.
+3 - If you are writing in C++, you must wrap your functions with `extern "C"` and then add the `__attribute__((visibility(“default”))) __attribute__((used))` flags. We must add these so that they can be used when compiled as a dynamic shared file (.so) for Android on the Dart FFI side. If you are writing in C, you only need to add the `__attribute__((visibility(“default”))) __attribute__((used))` flags. You can then run the project from main.dart.
 
 ---------------
 
@@ -52,4 +52,5 @@ android{
 }
 ```
 
-3 - Eğer C++ yazacaksanız fonksiyonlarınızı `extern "C"` ile sarmalamanız gerekir daha sonra `__attribute__((visibility("default"))) __attribute__((used))` bayrağını eklemelisiniz. Bu dart ffi tarafında Android için .so olarak dinamik paylaşılabilir dosya halinde derlendiğinde kullanılmak için bunları eklemek zorundayız. C ile yazacaksanız sadece `__attribute__((visibility("default"))) __attribute__((used))` bayrağını eklemeniz yeterli olacak. Daha sonra projeyi `main.dart`'tan çalıştırabilirsiniz.
+3 - Eğer C++ yazacaksanız fonksiyonlarınızı `extern "C"` ile sarmalamanız gerekir daha sonra `__attribute__((visibility("default"))) __attribute__((used))` bayraklarını eklemelisiniz. Bu dart ffi tarafında Android için .so olarak dinamik paylaşılabilir dosya halinde derlendiğinde kullanılmak için bunları eklemek zorundayız. C ile yazacaksanız sadece `__attribute__((visibility("default"))) __attribute__((used))` bayraklarını eklemeniz yeterli olacak. Daha sonra projeyi `main.dart`'tan çalıştırabilirsiniz.
+
